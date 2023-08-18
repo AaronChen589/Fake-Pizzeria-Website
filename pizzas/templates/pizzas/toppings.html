@@ -1,0 +1,17 @@
+{% extends "pizzas/base.html" %}
+
+{% block content %}
+
+<h1><center> Toppings For The  Pie </center></h1>
+
+<ul>
+    <center>
+        {% for topping in toppings %}
+
+        <p><font size="6"> {{ topping }} </font> <br/> </p>
+    
+        {% endfor %}
+    </center>
+</ul>
+
+{% endblock content %}

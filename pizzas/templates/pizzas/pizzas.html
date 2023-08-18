@@ -1,0 +1,23 @@
+
+{% extends "pizzas/base.html" %}
+
+{% block content %}
+
+<h1><center> Select Your Pie </center> </h1>
+
+<ul>
+    <center>
+        {% for pizza in pizzas %}
+
+        <p> <font size="6"><a href="{% url 'pizzas:toppings' pizza.id %}">{{ pizza  }}</a><br/> </font></p>
+      
+    {% empty %}
+    <li>No pizzas available.</li>
+    </center>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
+
+
+
